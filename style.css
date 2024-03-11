@@ -124,7 +124,7 @@ nav ul li:hover a::after {
  
 
 .header-text a:hover{
-    background:blue;
+    background:#fff
 }
  
 
@@ -346,7 +346,7 @@ color: #666;
         margin-bottom: 80px;
        }
        button:hover{
-        background-color: #666;
+        background-color:#fff;
        }
        .contact-info{
         text-align: left;
