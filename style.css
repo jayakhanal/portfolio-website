@@ -30,13 +30,14 @@ box-sizing: border-box;
   .image{
     position: absolute; 
      /* height: 70px;   */
-     left: 50%;
-    bottom: 0; 
-    right: 100px;  
+     left: 60%;
+    bottom :0px; 
+    /* right: 100px;   */
     height: 300px;
     width: 300px;
-    object-fit: contain;
-    padding-bottom:55%;
+    /* object-fit: contain; */
+     padding-bottom:67%;
+    /* z-index: 11111; */
 
  }
  
@@ -78,7 +79,7 @@ nav ul li a::after {
     content: '';  
     width: 0%;
     height: 3px;
-    background: #ff004f;
+    background: #ff6347;
     position: absolute;
     left: 0;
     bottom: -6px; 
@@ -91,42 +92,54 @@ nav ul li:hover a::after {
  
     
 .header-text{
-    font-size: 30px;
+    font-size: 35px;
     margin-top: 10%;
 }
 .header-text h1{
-    font-size: 30px;
+    font-size: 35px;
 }
 .header-text p{
-    font-size: 20px;
+    font-size: 18px;
     font-family: sans-serif;
 }
 .header-text h1 span{
     color:#ff6347;
+    font-size: 40px;
     
 }
- .header-text a{
-    text-decoration: none;
+ /* .header-text a{ */
+    /* text-decoration: none;
     color:#fff;
     background: #ff6347;
-    margin: 20px 0;
-    padding: 8px 25px;
-    border-radius: 10px;
+    /* margin: 20px 0; */
+    /* padding: 8px 25px; */
+     /* border-radius: 10px;  */
 
-    transition: 0.4s;
+    /* transition: 0.4s;
     font-size: 10px; 
- }
-   .header-text  a social-media {
-    margin-bottom: 20px;
-    color: aqua;
-
- }
+ } */
+   /* .header-text  a social-media { */
+    /* margin-bottom: 20px; */
+    
+ 
  
 
-.header-text a:hover{
-    background:#fff
-}
- 
+
+/* .header-text btn a{ */
+/* border: 2px solid #ff6347; */
+
+ .between a{
+    background-color: whitesmoke;
+     color: black;
+     text-decoration: none;
+     padding: 8px 25px;
+     border-radius: 10px;
+     border: 2px solid #ff6347;
+     font-size:19px;
+ }
+ .between a:hover{
+    background-color: #ff6347;
+ }
 
     /* about me  */
     
@@ -184,7 +197,7 @@ nav ul li:hover a::after {
 .menu-content button{
     display: inline-block;
     background-color: #ff6347;
-    color: #fff;
+    color:black;
     padding: 10px 20x ;
     border-radius: 4px;
     font-size: 15px;
@@ -199,7 +212,7 @@ nav ul li:hover a::after {
 
 }
  .menu-content button:hover{
-    background-color: aqua;
+    background-color: white;
  }
 .menu-content p {
 font-size: 25px;
@@ -210,18 +223,27 @@ color: #666;
 
 /* medias icons */
 .social-media a{
-    /* display: inline-block; */
-    width: 40px;
-    height: 40px;
+    /* display: inline-block; 
+     width: 20px;
+    height: 40px;  */
     text-align: center;
-    border-radius: 60%;
-    color: #fff;
+     border-radius:10px;
+     background-color:whitesmoke; 
+    color:#ff6347;
     cursor: pointer;
     transition: 0.4s ease;
-    background-color: #666;
-    font-size: 20px;
-}
-
+    font-weight: 300;
+    font-size: 30px; 
+    margin: 10px;
+} 
+ /* #social-media btn a{ */
+    /* background-color: whitesmoke; */
+    /* color: #ff6347; */
+    /* text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: 2px solid #ff6347;
+}  */
 
  
  
@@ -278,7 +300,7 @@ color: #666;
 
           }
           .source:hover{
-            background-color: #666;
+            /* background-color: #6; */
           }
        .source h2{
            color:brown;
@@ -347,7 +369,7 @@ color: #666;
        }
        button:hover{
         background-color:#fff;
-       }
+       } 
        .contact-info{
         text-align: left;
        }
@@ -366,7 +388,7 @@ color: #666;
         
        }
        footer{
-        background-color: #333;
+        background-color: #ff6347;
 
        }
        .footercontainer{
@@ -378,19 +400,29 @@ color: #666;
         justify-content: center;
 
        }
-       .media a{
-        text-decoration: none;
+       .media a i {
+        /* text-decoration: none;
         padding: 10px;
         background-color: #f8f8f8;
         margin: 10px;
         border-radius: 50%;
+        color: #ff6347; */
+        text-align: center;
+     border-radius:10px;
+     /* background-color:whitesmoke;  */
+    color:whitesmoke;
+    cursor: pointer;
+    transition: 0.4s ease;
+    font-weight: 300;
+    font-size: 30px; 
+    margin: 10px;
        }
-       .media a i{
+       /* .media a i{
         color: black;
-        opacity: 0.9;
-       }
+        opacity: 0.9; */
+       
        .media a:hover{
-        background-color: blue;
+        /* background-color: whitesmoke; */
         transition: 0.5 ; 
        }
        .footerbottom{
@@ -417,5 +449,6 @@ color: #666;
     margin-top:133px;
 }
 .menu{
-    background-color: #ecf3f8;
+    
+    background-color: #ecf3f8; 
 }
