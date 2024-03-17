@@ -299,9 +299,7 @@ color: #666;
            transition: 0.5s ease;
 
           }
-          .source:hover{
-            /* background-color: #6; */
-          }
+         
        .source h2{
            color:brown;
            margin: 18px;
