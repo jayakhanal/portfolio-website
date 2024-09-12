@@ -1,0 +1,11 @@
+.container{
+display: flex;
+justify-content: center;
+padding: 30px;
+}
+.menu{
+    align-items: center;
+    text-align: center;
+    width: 70%;
+    box-shadow: rgba(15,15, 26, 0.1) opx 8px 24px;
+}
