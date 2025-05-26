@@ -11,7 +11,7 @@
     <!-- <link rel="stylesheet"href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> 
 <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
@@ -26,7 +26,7 @@
                  <ul style="z-index: 11111;" >
                     <li class="list"><a href="#home">Home</a></li>
                     <li class="list"><a href="#About me">About Me</a></li>
-                    <li class="list"><a href="#My Skills">My Skills</a></li>
+                    <li class="list"><a href="#MySkills">My Skills</a></li>
                     <li class="list"><a href="#Contact">Contact</a></li> 
                    </ul>
           </nav>
@@ -48,71 +48,113 @@
                 </div>
         </div>
         </div>
-        <div class="image">
-            
-         <img src="zaya.png" alt =" "> 
-        
-    </div>
+
+
+    
              
            <div id="About me">
             <!-- About me -->
             <!-- <div class="image"> -->
-                 <!-- <img src="zaya.png" alt=" ">  -->
+                 <!-- <img src="zaya.png" alt=" "> 
             <section class="menu">
-                <div class="heading">
-                    <h1>About me</h1>
-                </div>
-                <div class="element">
-                    <div class=" menu-content">
-                        <p> I am Jaya Khanal.I am a Computer Science student with a passion for web development and design.I am proficient in programming language including HTML,CSS,Java.I aspire to work as a software developer in a dynamic and innovative Company,where I can contribute to impactful projects and continue to learn and grow.</p>
-                        <button class="main">Learn More</button>
-                    </div>
-                    <div class=" menu-img1">
-                        <!-- <img src="zaya.jpg" height="200px" width="200px">  -->
-
-                    </div>
-                </div>
+                <div class="heading"> -->
         
-                </div>
-            </div>
-            <div id="My Skills">    
-                
-                <div class="wrapper">
-                    <div class= "title">
-                        <h1> My Skills</h1>
-                    </div>
-                    <hr>
-                    <div class="source">
-                        <img src="html.jpeg" alt="" height="40px width=40px">
-                            <h2>HTML</h2>
-                            <p> HTML is the most basic building block of the Web  used by the browser to manipulate text, images, and other content display it in the required format. </p>
-                            <!-- <a href=""class="button">Read more</a> -->
-                       </div>
-            
-                 <div class="source">
-                        <img src="CSS-Logo.jpg" alt="" height="40px" width="40px">
-                            <h2>CSS</h2>
-                            <!-- <a href=""class="button">Read more</a> -->
-                            <p> CSS is a rule-based language — you define the rules by specifying groups of styles that should be applied to particular elements or groups of elements on your web page. </p>
-                       </div>
-            
-            
-                       <!-- <div class="source">
-                        <img src="ms powerpoint.jpg" alt="" height="40px "width="40px">
-                            <h2>Powerpoint</h2>
-                            <p> It is a presentation-based program that uses graphics, videos, etc. to make a presentation more interactive and interesting. . </p>
-                            <a href=""class="button">Read more</a> -->
-                       <!-- </div> -->
-                       <div class="source">
-                        <img src="Canva-Logo.png" alt="" height="40px" width="40px">
-                            <h2>Canva</h2>
-                            <p> Canva is a free-to-use online graphic design tool. Use it to create social media posts, presentations, posters, videos, logos and more.</p>
-                       </div>
-                     </div>
+                    <div class="about-section">
+                        <h2>About Me</h2>
+                        <p>I am Jaya Khanal, a Computer Science student with a passion for web development and design.</p>
+                        <p>I am proficient in HTML, CSS, Java, and currently learning backend technologies like Node.js and MySQL.</p>
+                        <p>I enjoy working on creative projects that solve real problems and continuously strive to learn and improve.</p>
+                      
+                        <div id="moreContent" style="display: none;">
+                          <p>In my free time, I contribute to open-source projects, explore UI/UX design, and write technical blogs. I'm currently looking for internship opportunities where I can contribute and grow as a developer.</p>
+                        </div>
+                      
+                        <button class="learn-more-button" onclick="toggleMore()">Learn More</button>
+                      </div>
+                      <script>   
+                        function toggleMore() {
+                        const moreContent = document.getElementById('moreContent');
+                        const button = document.querySelector('.learn-more-button');
+                      
+                        if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+                          moreContent.style.display = 'block';
+                          button.textContent = 'Show Less';
+                        } else {
+                          moreContent.style.display = 'none';
+                          button.textContent = 'Learn More';
+                        }
+                      }
+                                 </script>
 
-                    </section>
+
+ <div class="image">
+            
+            <img src="zaya.png" alt="Portfolio" class="portfolio-image" />
+
+        </div>
+    
+
+
+<section id="portfolio">
+  <h2>My Projects</h2>
+
+  <div class="portfolio-flex">
+
+    <div class="project-card">
+      <img src="petpal.png" alt="Pet Ordering System">
+      <h3>Pet Ordering System</h3>
+      <p>A digital platform for browsing, filtering, and purchasing pets online done for a 4th sem College projects..</p>
+      <a href="https://github.com/jayakhanal/Pet_order" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="login.png" alt="Login Page">
+      <h3>Login Page</h3>
+      <p>A simple login form that I made to build a habit of learning HTML and CSS.</p>
+      <a href="https://github.com/jayakhanal/login_page" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="Sabji-Mandi.png" alt="Login Page">
+      <h3>Sabji-mandi</h3>
+    <p>Currently learning Flutter to build modern, cross-platform mobile apps using Dart.</p>
+      <a href="https://github.com/jayakhanal/Learning-Flutter" target="_blank">View Project</a>
+    </div>
+  </div>
+</section>
+
+  
+                     
+
+               
+                    <div id="MySkills">
+                    <h2 class="section-title">My Skills</h2>
+                    <div class="skills-container">
+                      <div class="card">
+                        <div class="card-icon">📄</div>
+                        <div class="card-title">HTML</div>
+                        <div class="card-text">HTML is the most basic building block of the Web used by the browser to structure content.</div>
+                      </div>
+                  
+                      <div class="card">
+                        <div class="card-icon">🎨</div>
+                        <div class="card-title">CSS</div>
+                        <div class="card-text">CSS is a rule-based language — you define the rules by specifying styles for elements.</div>
+                      </div>
+                  
+                      <div class="card">
+                        <div class="card-icon">🖌️</div>
+                        <div class="card-title">Canva</div>
+                        <div class="card-text">Canva is a free-to-use online graphic design tool. Use it to create presentations, social media posts, and more.</div>
+                      </div>
                     </div>
-                </div>
+                  
+                  
+                
+        
+                      
+            
+          
                  <div id="Contact">   
         <section class="contact">
         <div class="main">
@@ -131,7 +173,7 @@
             <div class="form-group">
                 <textarea name="message" placeholder="Message"></textarea>
             </div>
-<button type="submit">send message</button>
+<button type="submit">Send message</button>
         </form>
          </div>
          <div class="contact-info">
