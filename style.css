@@ -5,9 +5,33 @@
     box-sizing: border-box;
   }
   
-  /* 
+
   body {
+
+  background: linear-gradient(135deg, #1e1e2f 0%, #252540 100%);
+  /* color: white; */
+
+
+  /* Animation setup */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
   
   #header {
     height: 100vh;
@@ -17,26 +41,7 @@
   }
   */
   
-  /* .photo {
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    right: 100px;
-    bottom: 0;
-  } */
-  
-  .image {
-    width: 600px;
-    height: 600px;
-    /* object-fit: contain; */
-    position: absolute;
-    left: 60%;
-    bottom: 0px;
-    height: 300px;
-    width: 300px;
-    padding-bottom: 67%;
-    /* z-index: 11111; */
-  }
+ 
   
   .container {
     padding: 15px 10%;
@@ -54,6 +59,7 @@
   
   .logo {
     width: 140px;
+    background-color: #e5533d;
   }
   
   nav ul li {
@@ -67,7 +73,7 @@
   }
   
   nav ul li a {
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 20px;
     position: relative;
@@ -100,6 +106,7 @@
   .header-text p {
     font-size: 18px;
     font-family: sans-serif;
+    color: white;
   }
   
   .header-text h1 span {
@@ -107,24 +114,10 @@
     font-size: 40px;
   }
   
-  /* .header-text a {
-    text-decoration: none;
-    color: #fff;
-    background: #ff6347;
-    margin: 20px 0;
-    padding: 8px 25px;
-    border-radius: 10px;
-    transition: 0.4s;
-    font-size: 10px;
-  } */
-  
-  /* .header-text a social-media {
-    margin-bottom: 20px;
-  } */
-  
+ 
   .between a {
     background-color: whitesmoke;
-    color: black;
+    color:black;
     text-decoration: none;
     padding: 8px 25px;
     border-radius: 10px;
@@ -136,37 +129,7 @@
     background-color: #ff6347;
   }
   
-  /* .element {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 60px auto;
-    width: 90%;
-  }
-  
-  .menu-content {
-    width: 600px;
-    margin: 0px 25px;
-    flex: 1;
-    font-size: 25px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    padding: 10px;
-  }
-  
-  .menu-content {
-    flex: 1;
-    width: 600px;
-    margin: auto;
-  } */
-  
-  /* picture {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 40px;
-  } */
-  
+ 
   .menu-content button {
     display: inline-block;
     background-color: #ff6347;
@@ -199,7 +162,7 @@
   .social-media a {
     text-align: center;
     border-radius: 10px;
-    background-color: whitesmoke;
+    background-color:;
     color: #ff6347;
     cursor: pointer;
     transition: 0.4s ease;
@@ -207,38 +170,89 @@
     font-size: 30px;
     margin: 10px;
   }
-  
-  
-  .portfolio-image {
-    width: 300px;    /* Decrease from 450px */
-    height: 300px;   /* Decrease from 450px */
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 6px 4px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Header container: text left, image right */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;      /* stack on small screens */
+    padding: 40px 10%;
+}
+
+/* Header text */
+.header-text {
+    flex: 1 1 60%;       /* text takes ~60% width */
+}
+
+/* Header image */
+.header-image {
+    flex: 1;             /* Allow it to grow/shrink naturally */
+    display: flex;       /* Use flex to align the image */
+    justify-content: center; /* Keeps image centered in its area */
+    align-items: center;
+}
+
+.header-image img {
+    width: 250px;        /* Fixed size for a balanced look */
+    height: 250px;       /* Match width for perfect circle */
+    object-fit: cover;   /* Prevents distortion */
+    border-radius: 55%;  /* Makes it circular */
+    
+    /* Elegant Border & Glow */
+    border: 4px solid #ff6347; 
+    padding: 10px;        /* Creates a white gap between image and border */
+    background: white;   /* Gap color */
+    
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: all 0.4s ease;
     cursor: pointer;
-    position: relative;
-    z-index: 1;
+}
+
+.header-image img:hover {
+    transform: scale(1.08) rotate(2deg); /* Subtle zoom and tilt */
+    box-shadow: 0 15px 35px rgba(255, 99, 71, 0.4); /* Colored glow on hover */
+    border-color: #fff; /* Changes border color on hover */
+}
+
+/* Responsive: center everything for mobile */
+@media (max-width: 768px) {
+    .header-image img {
+        width: 180px;    /* Slightly smaller on mobile phones */
+        height: 180px;
+    }
 }
 
   
-  .portfolio-image:hover {
-    transform: scale(1.05);    /* Slight zoom on hover */
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);  /* More prominent shadow on hover */
-  }
-  
+   .portfolio-image {
+    width: 180px;         /* Decreased size for a smaller look */
+    height: 180px;        /* Must match width for a perfect circle */
+    object-fit: cover;    /* Prevents the face/subject from stretching */
+    border-radius: 50%;   /* This creates the circular shape */
+    border: 3px solid #ff6347; /* Optional: adds a nice border ring */
+    
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;    /* Centers the circle */
+}
+
+.portfolio-image:hover {
+    transform: scale(1.1); /* Zoom effect stays the same */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
   .about-section {
     max-width: 700px;
     margin: 50px auto;
     /* background: #fff; */
     /* padding: 30px 40px; */
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 30px rgba(0,0,0,0.1);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
+    color: white ;
     text-align: center;
     transition: box-shadow 0.3s ease;
-   background: linear-gradient(to right, #fdfbfb, #ebedee);
    padding: 40px;
     /* background: linear-gradient(to right, #fdfbfb, #ebedee);
     text-align: center; */
@@ -259,7 +273,7 @@
     font-size: 1.15rem;
     line-height: 1.6;
     margin-bottom: 20px;
-    color: #555;
+    color: white;
   }
   
   .learn-more-button {
@@ -283,16 +297,15 @@
   /* Portfolio Section */
   #portfolio {
     padding: 60px 30px;
-    background: linear-gradient(to right, #fdfbfb, #ebedee);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
+    color: white;
     text-align: center;
   }
   
   #portfolio h2 {
     font-size: 2.8rem;
     margin-bottom: 50px;
-    color: #222;
+    color: #e5533d;
   }
   
   /* Flex container for 2 columns */
@@ -304,71 +317,149 @@
   }
   
   /* Project Card */
-  .project-card {
-    background-color: #ffffff;
-    border-radius: 20px;
-    width: 100%;
-    max-width: 450px;
-    overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-  }
-  
-  .project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .project-card h3 {
-    font-size: 1.5rem;
-    margin: 16px 20px 10px;
-    color: #1a237e;
-  }
-  
-  .project-card p {
-    font-size: 1rem;
-    margin: 0 20px 20px;
-    color: #555;
-    line-height: 1.6;
-  }
-  
-  .project-card a {
-    display: inline-block;
-    margin: 0 20px 20px;
-    padding: 10px 20px;
-    background-color: #1976d2;
-    color: #fff;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .project-card a:hover {
-    background-color: #0d47a1;
-  }
+  /* =========================
+   PROJECT SECTION
+========================= */
+
+.portfolio-flex {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap;          /* one line */
+  margin-top: 40px;
+}
+
+/* Project Card */
+.project-card {
+  width: 300px;               /* smaller card */
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* Project Image */
+.project-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* Project Title */
+.project-card h3 {
+  font-size: 1.2rem;
+  margin: 12px 16px 6px;
+  color: #1a237e;
+}
+
+/* Project Description */
+.project-card p {
+  font-size: 0.9rem;
+  margin: 0 16px 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Project Button */
+.project-card a {
+  margin: 0 16px 16px;
+  padding: 8px 14px;
+  background-color: #1976d2;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+  background-color: #0d47a1;
+}
+
+/* =========================
+   SKILLS SECTION
+========================= */
+
+#MySkills {
+  padding: 60px 20px;
+  background:#1e1e2f
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #0d47a1;
+}
+
+/* Skills Container */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Skill Card */
+.card {
+  width: 260px;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #e3f2fd, #ffffff);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.2);
+}
+
+/* Skill Icon */
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+/* Skill Title */
+.card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+
+/* Skill Description */
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
   
 
 
   
   #MySkills {
     padding: 40px;
-    background: linear-gradient(to right, #fdfbfb, #ebedee);
     text-align: center;
   }
   
   .section-title {
     font-size: 2.5rem;
     margin-bottom: 30px;
-    color: #333;
+    color: #e5533d;
     font-weight: 700;
   }
   
@@ -380,10 +471,10 @@
   }
   
   .card {
-    background-color: #fff;
+    /* background-color: #fff; */
     border-radius: 15px;
     padding: 25px;
-    width: 260px;
+    width: 50px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
@@ -394,7 +485,7 @@
   }
   
   .card-icon {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 15px;
   }
   
@@ -402,12 +493,12 @@
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 10px;
-    color: #333;
+    color: #e5533d;
   }
   
   .card-text {
     font-size: 0.95rem;
-    color: #555;
+    color:white;
     line-height: 1.5;
   }
   
@@ -416,6 +507,7 @@
     min-height: 100vh;
     padding: 50px;
     text-align: center;
+    color: #e5533d;
   }
   
   .main {
@@ -476,7 +568,50 @@
   button:hover {
     background-color: #fff;
   }
-  
+  /* Container for cards */
+.cards-container {
+  display: flex;
+  gap: 20px; /* space between cards */
+  justify-content: center; /* center the cards horizontally */
+  flex-wrap: nowrap; /* keep cards in one line */
+  padding: 20px;
+}
+
+/* Individual card styles */
+.card {
+  /* background-color: #fff; */
+  border-radius: 15px;
+  padding: 20px;
+  width: 200px; /* reasonable width for cards side by side */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white; /* added so text is visible if bg is dark */
+  background: #2c2c3e; /* dark background example */
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #e5533d;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: white;
+  line-height: 1.5;
+}
+
   .contact-info {
     text-align: left;
   }
@@ -484,94 +619,66 @@
   .contact-info h3 {
     font-size: 20px;
     margin-bottom: 20px;
-    color: #333;
+    color:  #e5533d;
   }
   
   .contact-info p {
     margin-bottom: 10px;
-    color: #555;
+    color:white;
   }
   
   .contact-info i {
-    color: #666;
+    color:white;
     margin-right: 10px;
   }
   
-  footer {
+
+footer {
     background-color: #ff6347;
-  }
-  
-  .footercontainer {
+    color: whitesmoke;
     width: 100%;
-    padding: 10px 10px 10px;
-  }
-  
-  .media {
+    padding: 20px 0 10px;
+    position: relative;   /* keeps it in normal flow */
+    clear: both;          /* ensures no overlap with previous content */
+    bottom: 0;
+}
+
+.footercontainer {
     display: flex;
     justify-content: center;
-  }
-  
-  .media a i {
-    text-align: center;
-    border-radius: 10px;
-    /* background-color:whitesmoke; */
-    color: whitesmoke;
-    cursor: pointer;
-    transition: 0.4s ease;
-    font-weight: 300;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+}
+
+.media a i {
     font-size: 30px;
-    margin: 10px;
-  }
-  
-  /* .media a i{
-  color: black;
-  opacity: 0.9; */
-  
-  .media a:hover {
-    /* background-color: whitesmoke; */
-    transition: 0.5s;
-  }
-  
-  .footerbottom {
-    text-align: center;
-    padding: 10px;
-  }
-  
-  .footerbottom p {
+    margin: 0 10px;
     color: whitesmoke;
-  }
-  
-  .designer {
+    transition: 0.3s;
+}
+
+.media a:hover i {
+    transform: scale(1.2);
+    color: #000;
+}
+
+.footerbottom {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footerbottom p {
+    color: whitesmoke;
+    font-size: 0.9rem;
+}
+
+.designer {
     font-weight: 400;
     letter-spacing: 1px;
-    margin: 0px 5px;
-  }
-  
-  .bg {
-    position: absolute;
-    margin-top: 350px;
-  }
-  
-  .image img {
-    margin-top: 480px;
-  } 
-  
-  .menu {
-    background-color: #ecf3f8;
-  }
-  /* media query for mobile devices */
-  @media (max-width: 600px) {
-    body {
-      font-size: 14px;
-      padding: 10px;
-    }
-  }
-
-  /* for desktop */
-  @media (min-width: 1025px) {
-    body {
-      font-size: 18px;
-      padding: 40px;
-    }
-  }
-    
+}
+#About\ me, #MySkills, #portfolio, #Contact {
+    padding-bottom: 100px; /* prevent footer overlap */
+}
+ 
