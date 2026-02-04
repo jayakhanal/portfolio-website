@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaya Khanal</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> 
-    <link rel="manifest" href="/site.webmanifest">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaya Khanal Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 
+  <!-- NAVIGATION -->
   <nav>
     <div id="photo">
-      <img src="logooo.jpg" class="logo" alt="Logo">
+      <img src="logo1.png" class="logo" alt="Logo">
     </div>
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#About">About Me</a></li>
-      <li><a href="#portfolio">My Projects</a></li>
-      <li><a href="#MySkills">My Skills</a></li>
+      <li><a href="#Education">Education</a></li>
+      <li><a href="#Experience">Experience</a></li>
+      <li><a href="#Project">Projects</a></li>
+      <li><a href="#MySkills">Skills</a></li>
       <li><a href="#Contact">Contact</a></li>
     </ul>
   </nav>
 
+  <!-- HEADER -->
   <header id="home">
     <div class="header-container">
       <div class="header-text">
-        <p>Frontend Developer</p>
-        <h1>Hi, I'm <span>Jaya Khanal</span></h1>
-        <p>Passionate representative seeking to improve the qualities and make a positive impact in my field.<br>
-          Driven by curiosity and a passion for creating meaningful experiences.
-Focused on clarity, simplicity, and continuous growth.
+        <p class="role-line"> 
+          <span class="role-prefix" aria-hidden="true">I am a</span>
+          <span id="animated-role" class="role-animate" aria-live="polite">Frontend Developer</span>
         </p>
+        <h1>Hi, I'm <span>Jaya Khanal</span></h1>
+        <p>Passionate developer with a focus on<br> web development and UI design.</p>
         <div class="social-media">
-          <a href="https://www.facebook.com/zaya.khanal/"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/zaya_khanal_12/"><i class="fab fa-instagram"></i></a>
-          <a href="https://github.com/jayakhanal"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
         </div>
         <div class="between">
           <a href="Resume.pdf" download>Download CV</a>
@@ -51,130 +52,222 @@ Focused on clarity, simplicity, and continuous growth.
     </div>
   </header>
 
+  <!-- ABOUT SECTION -->
   <section id="About" class="about-section">
     <h2>About Me</h2>
-    <p>I am Jaya Khanal, a Computer Science student with a passion for web development and design.</p>
-    <p>I am proficient in HTML, CSS, Java, and currently learning backend technologies like Node.js and MySQL.</p>
-    <p>I enjoy working on creative projects that solve real problems and continuously strive to learn and improve.</p>
-    
-    <div id="moreContent" style="display: none;">
-      <p>In my free time, I contribute to open-source projects, explore UI/UX design, and write technical blogs. I'm currently looking for internship opportunities where I can contribute and grow as a developer.</p>
-    </div>
-    <button class="learn-more-button" onclick="toggleMore()">Learn More</button>
+    <p>I am Jaya Khanal, a Computer Science student with passion for web development and design.</p>
+    <p>Proficient in HTML, CSS, JavaScript, and currently learning backend technologies like Node.js and MySQL.</p>
+    <button class="learn-more-button">Learn More</button>
   </section>
 
+  <!-- PORTFOLIO SECTION -->
   <section id="portfolio">
-    <h2>My Projects</h2>
+    
+  <!-- EDUCATION SECTION -->
+  <section id="Education" class="education-section" aria-labelledby="education-heading">
+    <div class="container">
+      <h2 id="education-heading">Education</h2>
+      <div class="timeline">
+        <article class="edu-item" aria-labelledby="edu1-title">
+          <h3 id="edu1-title">Bachelors of Computer Application<span class="school">— Tribhuvan University</span></h3>
+          <p class="meta"><time datetime="2022">2022</time> — <time datetime="present">Present</time></p>
+          <p>Relevant coursework: Web Development, Designing ,Data Structures, Databases.</p>
+        </article>
+
+        <article class="edu-item" aria-labelledby="edu2-title">
+          <h3 id="edu2-title">Higher Secondary <span class="school">— Banepa Nist College</span></h3>
+          <p class="meta"><time datetime="2020">2020</time> — <time datetime="2022">2022</time></p>
+          <p>Focus: Management in Computer Science</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="Experience" class="experience-section" aria-labelledby="experience-heading">
+    <div class="container">
+      <h2 id="experience-heading">Experience</h2>
+      <div class="timeline">
+        <article class="exp-item" aria-labelledby="exp1-title">
+          <h3 id="exp1-title">UI/UX Design Intern <span class="company">— CubixTech Nepal</span></h3>
+          <p class="meta"><time datetime="2024">2025</time> — <time datetime="2025">Present</time></p>
+          <ul>
+            <li>Created wireframes, prototypes, and UI designs using Figma
+
+            <li>Designed login pages, dashboards, and form layouts</li>
+
+            <li>Used components, frames, and auto-layout in Figma</li>
+          </ul>
+          
+        </article>
+
+        <article class="exp-item" aria-labelledby="exp2-title">
+          <h3 id="exp2-title">Admin support Intern <span class="company">— Samriddhi College</span></h3>
+          <p class="meta"><time datetime="2023">2025  sept—Dec</time></p>
+         <p><ul>
+          <li>Assisted in day-to-day administrative operations of the college office</li>
+          <li>Supported faculty and staff with data entry and documentation tasks</li>
+          <li>Assisted students with basic administrative queries</li>
+          <li>Organized files, reports, and official documents systematically</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+ <div id="Project">
+  <h2>My Projects</h2>
     <div class="portfolio-flex">
       <div class="project-card">
         <img src="petpal.png" alt="Pet Ordering System">
         <h3>Pet Ordering System</h3>
         <p>A digital platform for browsing, filtering, and purchasing pets online.</p>
-        <a href="https://github.com/jayakhanal/Pet_order" target="_blank">View Project</a>
+        <a href="#">View Project</a>
       </div>
-
+    
       <div class="project-card">
         <img src="login.png" alt="Login Page">
         <h3>Login Page</h3>
-        <p>A simple login form that I made to build a habit of learning HTML and CSS.</p>
-        <a href="https://github.com/jayakhanal/login_page" target="_blank">View Project</a>
+        <p>Simple login form using HTML and CSS.</p>
+        <a href="#">View Project</a>
       </div>
 
       <div class="project-card">
         <img src="Sabji-Mandi.png" alt="Sabji-mandi">
         <h3>Sabji-mandi</h3>
-        <p>Currently learning Flutter to build modern, cross-platform mobile apps using Dart.</p>
-        <a href="https://github.com/jayakhanal/Learning-Flutter" target="_blank">View Project</a>
+        <p>Learning Flutter to build cross-platform mobile apps.</p>
+        <a href="#">View Project</a>
       </div>
-      
+    </div>
     </div>
   </section>
 
+  <!-- SKILLS SECTION -->
   <section id="MySkills">
     <h2 class="section-title">My Skills</h2>
-    <div class="skills-container">
-      <div class="card">
-        <div class="card-icon">📄</div>
-        <div class="card-title">HTML</div>
-        <div class="card-text">HTML is the most basic building block of the Web used by the browser to structure content.</div>
-      </div>
-  
-      <div class="card">
-        <div class="card-icon">🎨</div>
-        <div class="card-title">CSS</div>
-        <div class="card-text">CSS is a rule-based language — you define the rules by specifying styles for elements.</div>
-      </div>
-  
-      <div class="card">
-        <div class="card-icon">🖌️</div>
-        <div class="card-title">Canva</div>
-        <div class="card-text">Canva is a free-to-use online graphic design tool for presentations and more.</div>
-      </div>
-  <div class="card">
-  <div class="card-icon">🟨</div>
-  <div class="card-title">JavaScript</div>
-  <div class="card-text">
-    JavaScript is a powerful scripting language used to create dynamic and interactive web applications.
-  </div>
-  <div>
 
+    <div class="skills-container" role="list" aria-label="Core skills">
+      <div class="card" role="listitem">
+        <div class="card-icon" aria-hidden="true">🌐</div>
+        <div class="card-title">HTML — Semantic markup</div>
+        <div class="card-text">Write accessible, SEO-friendly structure using modern HTML5.</div>
+      </div>
 
+      <div class="card" role="listitem">
+        <div class="card-icon" aria-hidden="true">🎨</div>
+        <div class="card-title">CSS — Responsive &amp; Animations</div>
+        <div class="card-text">Mobile-first layouts, Grid/Flexbox and polished motion.</div>
+      </div>
 
+      <div class="card" role="listitem">
+        <div class="card-icon" aria-hidden="true">🟨</div>
+        <div class="card-title">JavaScript — ES6+</div>
+        <div class="card-text">DOM, fetch, async patterns and modern tooling.</div>
+      </div>
+
+      <div class="card" role="listitem">
+        <div class="card-icon" aria-hidden="true">⚛️</div>
+        <div class="card-title">React — Component-driven</div>
+        <div class="card-text">Reusable components, hooks and SPA architecture.</div>
+      </div>
+
+    
+
+      <div class="card" role="listitem">
+        <div class="card-icon" aria-hidden="true">🔧</div>
+        <div class="card-title">Git &amp; GitHub</div>
+        <div class="card-text">Version control, PR workflow and collaboration.</div>
+      </div>
+
+      <div class="card" role="listitem">
+        <div class="card-icon" aria-hidden="true">📱</div>
+        <div class="card-title">Responsive Design</div>
+        <div class="card-text">Mobile-first implementations and cross-device testing.</div>
+      </div>
+
+      <div class="card" role="listitem">
+        <div class="card-icon" aria-hidden="true">🎛️</div>
+        <div class="card-title">UI/UX &amp; Figma</div>
+        <div class="card-text">Design systems, prototypes and accessible interfaces.</div>
+      </div>
+    </div>
   </section>
 
+  <!-- CONTACT SECTION -->
   <section id="Contact" class="contact">
     <div class="main">
-      <h2>Contact me</h2>
-      <div class="contact-wrapper"> 
+      <h2>Contact Me</h2>
+      <div class="contact-wrapper">
         <div class="contact-form">
           <h3>Send Message</h3>
           <form>
             <div class="form-group">
-                <input type="text" placeholder="Name">
+              <input type="text" placeholder="Name">
             </div>
             <div class="form-group">
-                <input type="email" placeholder="Email">
+              <input type="email" placeholder="Email">
             </div>
             <div class="form-group">
-                <textarea placeholder="Message"></textarea>
+              <textarea placeholder="Message"></textarea>
             </div>
-            <button type="submit">Send message</button>
+            <button type="submit">Send Message</button>
           </form>
         </div>
         <div class="contact-info">
-          <h3>Contact Information</h3>
+          <h3>Contact Info</h3>
           <p><i class="fa fa-envelope"></i> zayakhanal@gmail.com</p>
-          <p><i class="fa fa-map-marker"></i> Bhaktapur</p>
+          <p><i class="fa fa-map-marker"></i> Bhaktapur, Nepal</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <div class="footercontainer">
-        <div class="media">
-            <a href="https://www.facebook.com/zaya.khanal"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/zaya_khanal_12/"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.github.com/jayakhanal"><i class="fab fa-github"></i></a>
-        </div>
+      <div class="media">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
     </div>
     <div class="footerbottom">
-        <p>Copyright &copy; 2023; Designed by <span class="designer">Jaya Khanal</span></p>
+      <p>Copyright &copy; 2026; Designed by <span class="designer">Jaya Khanal</span></p>
     </div>
   </footer>
 
-  <script>   
-    function toggleMore() {
-      const moreContent = document.getElementById('moreContent');
-      const button = document.querySelector('.learn-more-button');
-      if (moreContent.style.display === 'none' || moreContent.style.display === '') {
-        moreContent.style.display = 'block';
-        button.textContent = 'Show Less';
-      } else {
-        moreContent.style.display = 'none';
-        button.textContent = 'Learn More';
+  <script>
+    /* Animated header roles — respects prefers-reduced-motion */
+    (function(){
+      const roles = ["Frontend Developer","UI/UX Designer","Graphics Designer"];
+      const el = document.getElementById('animated-role');
+      if(!el) return;
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(prefersReduced){ el.textContent = roles[0]; return; }
+
+      let idx = 0;
+      const interval = 3000; // ms per item
+      const fadeMS = 280;
+
+      function show(i){
+        el.classList.remove('fade-in');
+        void el.offsetWidth; // trigger reflow to restart animation
+        el.textContent = roles[i];
+        el.classList.add('fade-in');
       }
-    }
+
+      show(0);
+      setInterval(()=>{
+        el.classList.remove('fade-in');
+        el.classList.add('fade-out');
+        setTimeout(()=>{
+          idx = (idx + 1) % roles.length;
+          show(idx);
+          el.classList.remove('fade-out');
+        }, fadeMS);
+      }, interval);
+    })();
   </script>
+
 </body>
 </html>
