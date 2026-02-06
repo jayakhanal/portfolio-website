@@ -10,10 +10,9 @@
 </head>
 <body>
 
-  <!-- NAVIGATION -->
   <nav>
     <div id="photo">
-      <img src="logo1.png" class="logo" alt="Logo">
+      <img src="Logoo.jpg" class="logo" alt="Logo">
     </div>
     <ul>
       <li><a href="#home">Home</a></li>
@@ -54,11 +53,42 @@
 
   <!-- ABOUT SECTION -->
   <section id="About" class="about-section">
-    <h2>About Me</h2>
-    <p>I am Jaya Khanal, a Computer Science student with passion for web development and design.</p>
-    <p>Proficient in HTML, CSS, JavaScript, and currently learning backend technologies like Node.js and MySQL.</p>
-    <button class="learn-more-button">Learn More</button>
-  </section>
+  <h2>About Me</h2>
+
+  <p>
+    I am Jaya Khanal, a Computer Science student with passion for web development and design.
+  </p>
+
+  <p>
+    Proficient in HTML, CSS, JavaScript, and currently learning backend technologies like Node.js and MySQL.
+  </p>
+
+  <!-- HIDDEN CONTENT -->
+  <div id="more-content">
+    <p>
+      I enjoy creating responsive and user-friendly interfaces. I also have experience with UI/UX design using Figma
+      and love turning ideas into real-world projects. I’m continuously improving my skills through hands-on projects.
+    </p>
+  </div>
+
+  <button class="learn-more-button" onclick="toggleAbout()">Show More</button>
+  <script>
+  function toggleAbout() {
+    const moreContent = document.getElementById("more-content");
+    const button = document.querySelector(".learn-more-button");
+
+    if (moreContent.style.display === "none") {
+      moreContent.style.display = "block";
+      button.textContent = "Show Less";
+    } else {
+      moreContent.style.display = "none";
+      button.textContent = "Show More";
+    }
+  }
+</script>
+
+</section>
+
 
   <!-- PORTFOLIO SECTION -->
   <section id="portfolio">
@@ -89,7 +119,7 @@
       <h2 id="experience-heading">Experience</h2>
       <div class="timeline">
         <article class="exp-item" aria-labelledby="exp1-title">
-          <h3 id="exp1-title">UI/UX Design Intern <span class="company">— CubixTech Nepal</span></h3>
+          <h3 id="exp1-title">UI/UX Design Intern <span class="company">— YoddhaLab Tech Pvt.Ltd</span></h3>
           <p class="meta"><time datetime="2024">2025</time> — <time datetime="2025">Present</time></p>
           <ul>
             <li>Created wireframes, prototypes, and UI designs using Figma
@@ -111,8 +141,25 @@
           <li>Organized files, reports, and official documents systematically</li>
           </ul>
         </article>
-      </div>
+
+    
+         
+      <article class="exp-item" aria-labelledby="exp2-title">
+          <h3 id="exp2-title">Frontend Developer<span class="company">— College projects </span></h3>
+          <!-- <p class="meta"><time datetime="2023">2025  sept—Dec</time></p>
+         <p><ul> -->
+          <li>Developed a Pet Ordering System as a web app with search, filter, and product detail features.
+
+           <li>Created Login & Signup Pages with validation using HTML, CSS, and JavaScript.</li>
+
+           <li>Focused on UI/UX design and responsive design for mobile and desktop devices.</li>
+
+<li>Hosted projects on GitHub and Netlify, showing live demos.</li>
+          </ul>
+        </article>
     </div>
+          </div>
+
   </section>
 
  <div id="Project">
@@ -122,22 +169,33 @@
         <img src="petpal.png" alt="Pet Ordering System">
         <h3>Pet Ordering System</h3>
         <p>A digital platform for browsing, filtering, and purchasing pets online.</p>
-        <a href="#">View Project</a>
+        <a href="https://github.com/jayakhanal/Pet_order-Project-I-">View Project</a>
       </div>
     
       <div class="project-card">
         <img src="login.png" alt="Login Page">
         <h3>Login Page</h3>
         <p>Simple login form using HTML and CSS.</p>
-        <a href="#">View Project</a>
+        <a href="https://github.com/jayakhanal/login_page">View Project</a>
       </div>
 
-      <div class="project-card">
-        <img src="Sabji-Mandi.png" alt="Sabji-mandi">
-        <h3>Sabji-mandi</h3>
-        <p>Learning Flutter to build cross-platform mobile apps.</p>
-        <a href="#">View Project</a>
-      </div>
+    <div class="project-card">
+  <img src="Sabji-Mandi.png" alt="Sabji-mandi">
+  <h3>Sabji-mandi</h3>
+  <p>Learning Flutter to build cross-platform mobile apps.</p>
+  <a href="https://github.com/jayakhanal/Learning-Flutter" target="_blank">View Project</a>
+</div>
+
+ <div class="project-card">
+  <img src="portfolio.png" alt="portfolio">
+  <h3>Portfolio</h3>
+  <p>Reflects My details</p>
+  <a href="https://github.com/jayakhanal/portfolio-website" target="_blank">View Project</a>
+</div>
+
+
+
+   
     </div>
     </div>
   </section>
@@ -271,3 +329,4 @@
 
 </body>
 </html>
+
