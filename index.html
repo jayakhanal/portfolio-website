@@ -13,7 +13,13 @@
   <nav>
     <div id="photo">
       <img src="Logoo.jpg" class="logo" alt="Logo">
+     
+
     </div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+  <i class="fas fa-bars"></i>
+</div>
+
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#About">About Me</a></li>
@@ -22,7 +28,13 @@
       <li><a href="#Project">Projects</a></li>
       <li><a href="#MySkills">Skills</a></li>
       <li><a href="#Contact">Contact</a></li>
+   
+
+    
+         
+
     </ul>
+
   </nav>
 
   <!-- HEADER -->
@@ -33,7 +45,7 @@
           <span class="role-prefix" aria-hidden="true">I am a</span>
           <span id="animated-role" class="role-animate" aria-live="polite">Frontend Developer</span>
         </p>
-        <h1>Hi, I'm <span>Jaya Khanal</span></h1>
+        <h1>Hi, I'm <span>Jaya Khanal </span></h1>
         <p>Passionate developer with a focus on<br> web development and UI design.</p>
         <div class="social-media">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -85,6 +97,7 @@
       button.textContent = "Show More";
     }
   }
+
 </script>
 
 </section>
@@ -326,6 +339,11 @@
       }, interval);
     })();
   </script>
+<script>
+function toggleMenu() {
+  document.querySelector("nav ul").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
